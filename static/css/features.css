@@ -1,5 +1,22 @@
 /* Styles for the features.html page */
 
+.feature-container {
+    padding: 50px;
+    width: 100%;
+}
+
+#feature-icon--danceability {
+    background-color: red;
+}
+
+#feature-icon--energy {
+    background-color: yellow;
+}
+
+#feature-icon--valence {
+    background-color: blue;
+}
+
 button.accordion {
     background-color: #eee;
     color: #444;
@@ -29,10 +46,13 @@ button.accordion.active:after {
 }
 
 div.accordion-panel {
-    padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
 }
 
