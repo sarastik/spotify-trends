@@ -1,34 +1,24 @@
 /* Styles for the features.html page */
 
+html {
+    background-color: #3C3C3B;
+}
+
 .feature-container {
     padding: 50px;
     width: 100%;
     margin: 5px;
 }
 
-#feature-icon--danceability {
-    background-color: red;
-}
-
-#feature-icon--energy {
-    background-color: yellow;
-}
-
-#feature-icon--valence {
-    background: #000046;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-#feature-icon--speechness {
-    background: #F1F2B5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #135058, #F1F2B5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #135058, #F1F2B5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.feature-container + .feature-container {
+    margin-left: 0px;
 }
 
 button.accordion {
-    background-color: #eee;
-    color: #444;
+    /* background-color: #eee;
+    color: #444; */
+    background-color: #3C3C3B;
+    color: #EBEBD3;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -39,7 +29,9 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-    background-color: #ddd;
+    /* background-color: #ddd; */
+    background-color: #EBEBD3;
+    color: #3C3C3B;
 }
 
 button.accordion:after {
@@ -55,7 +47,7 @@ button.accordion.active:after {
 }
 
 div.accordion-panel {
-    background-color: white;
+    background-color: #3C3C3B;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
