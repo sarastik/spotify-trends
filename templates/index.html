@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
+    <title>Spotify Trends</title>
 
-    </head>
-    <body>
-        <p>
-            Hello World!
-        </p>
-    </body>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login">
+        <h1>This is an example of the Authorization Code flow</h1>
+        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+      </div>
+      <div id="loggedin">
+        <div id="user-profile">
+        </div>
+        <div id="oauth">
+        </div>
+        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+      </div>
+    </div>
+  </body>
 </html>
