@@ -1,11 +1,15 @@
 /* Styles for the features.html page */
 
-html {
+body {
     background-color: #3C3C3B;
 }
 
+#accordion-menu {
+    width: 50%;
+}
+
 .feature-container {
-    padding: 50px;
+    padding: 20px;
     width: 100%;
     margin: 5px;
 }
@@ -15,10 +19,8 @@ html {
 }
 
 button.accordion {
-    /* background-color: #eee;
-    color: #444; */
-    background-color: #3C3C3B;
-    color: #EBEBD3;
+    background-color: #eee;
+    color: #3C3C3B;
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -29,8 +31,8 @@ button.accordion {
 }
 
 button.accordion.active, button.accordion:hover {
-    /* background-color: #ddd; */
-    background-color: #EBEBD3;
+    background-color: #ddd;
+    /* background-color: #EBEBD3; */
     color: #3C3C3B;
 }
 
