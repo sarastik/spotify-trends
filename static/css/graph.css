@@ -1,0 +1,15 @@
+/* Styles for the graph.html page */
+
+#track-graph {
+    width: 75%;
+    float: left;
+}
+
+#track-list {
+    width: 25%;
+    float: right;
+}
+
+.track-name {
+    font-weight: bold;
+}

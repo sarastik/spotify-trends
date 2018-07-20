@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spotify Trends</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Numeric -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.js"></script>
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" type="text/css" href="../static/css/graph.css"/>            
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="../static/js/graph.js"></script> 
+    <script type="text/javascript"> graph({{data|tojson}}) </script>   
+    
+  </head>
+
+  <body>
+    <div id="track-graph"></div>
+
+    <div id="track-list">
+      <ul class="list-group">
+        {% for trackName, features in data.items() %}
+          <li class="list-group-item">
+            <div class="track-name">{{trackName}}</div>
+            <div class="artists-names">
+              {% for artist in features["artists"][:-1] %}
+                <span>{{artist["name"]}}, </span>
+              {% endfor %}
+              <span>{{features["artists"][-1]["name"]}}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+  </body>
+</html>
